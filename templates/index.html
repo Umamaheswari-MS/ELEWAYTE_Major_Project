@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction</title>
+    <style>
+      h1{
+        font-family: 'CagliostroRegular';
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+          background-color: #f5f5f5;
+      }
+      .container {
+          margin-top: 50px;
+      }
+      form {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0px 0px 15px 0px #888888;
+      }
+      form p {
+          margin-bottom: 20px;
+      }
+      input[type="text"] {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-top: 5px;
+      }
+      input[type="submit"] {
+          width: 100%;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          background-color: #007bff;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+      }
+      input[type="submit"]:hover {
+          background-color: #070e16;
+      }
+
+      .prediction-section {
+          margin-top: 20px;
+          text-align: center;
+          font-family: 'CagliostroRegular';
+        font-weight: normal;
+        font-style: normal;
+      }
+      .prediction-result {
+          font-size: 24px;
+          font-weight: bold;
+          color: #1cce3d;
+          padding:10px;
+          font-family: 'CagliostroRegular';
+        font-style: normal;
+      }
+      </style>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/gagliostro" type="text/css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+      <h1>Heart Disease Prediction</h1>
+          <form action="/" method="post">
+              <p>General Health: <input type="text" name="General_Health"></p>
+              <p>Checkup: <input type="text" name="Checkup"></p>
+              <p>Exercise: <input type="text" name="Exercise"></p>
+              <p>Skin Cancer: <input type="text" name="Skin_Cancer"></p>
+              <p>Other Cancer: <input type="text" name="Other_Cancer"></p>
+              <p>Depression: <input type="text" name="Depression"></p>
+              <p>Diabetes: <input type="text" name="Diabetes"></p>
+              <p>Arthritis: <input type="text" name="Arthritis"></p>
+              <p>Sex: <input type="text" name="Sex"></p>
+              <p>Age Category: <input type="text" name="Age_Category"></p>
+              <p>Height (cm): <input type="text" name="Height_(cm)"></p>
+              <p>Weight (kg): <input type="text" name="Weight_(kg)"></p>
+              <p>BMI: <input type="text" name="BMI"></p>
+              <p>Smoking History: <input type="text" name="Smoking_History"></p>
+              <p>Alcohol Consumption: <input type="text" name="Alcohol_Consumption"></p>
+              <p>Fruit Consumption: <input type="text" name="Fruit_Consumption"></p>
+              <p>Green Vegetables Consumption: <input type="text" name="Green_Vegetables_Consumption"></p>
+              <p>Fried Potato Consumption: <input type="text" name="FriedPotato_Consumption"></p>
+
+              <input type="submit" value="Predict">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="prediction-section">
+      <div class="prediction-result">
+        <h2>Prediction Result: {{ prediction_result }}</h2>
+      </div>
+    </div>
+
+</body>
+</html>
